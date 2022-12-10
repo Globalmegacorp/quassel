@@ -139,7 +139,7 @@ jobs:
     - name: Check artifacts
       run: |
         # Sanity check: We should have exactly 5 files matching the given patterns
-        [[ 5 -eq $(find artifacts/ \( -type f -name 'Quassel*.dmg' -o -name 'quassel*.exe' -o -name 'quassel*.7z' \) -printf '.' | wc -c) ]]
+        [[ 2 -eq $(find artifacts/ \( -type f -name 'Quassel*.dmg' -o -name 'quassel*.exe' -o -name 'quassel*.7z' \) -printf '.' | wc -c) ]]
 
     - name: Create release notes
       if: startsWith(github.ref, 'refs/tags/')
